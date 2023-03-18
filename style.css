@@ -1,3 +1,5 @@
+/* colors: #192b37, white,  
+
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +7,14 @@
 }
 
 /* temporary style for structural html */
-* {
-    padding: 0.5rem;
+section {
     border: 1px solid rgb(225 225 225);
 }
 
-body { border: none; }
-
-html { border: none; }
+body { 
+    font-family: 'Catamaran', sans-serif;
+    color: #192b37;
+}
 
 /* Image Styles */
 .bg-image {
@@ -30,3 +32,7 @@ html { border: none; }
     background-color: #192b37;
     color: white;
 }
+
+.text-left {text-align: left}
+.text-center { text-align: center;}
+.text-right { text-align: right;}
