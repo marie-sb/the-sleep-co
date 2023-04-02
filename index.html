@@ -2,6 +2,7 @@
 <html>
     <!-- This is the head of our html where we add external ressources and metadata-->
     <head>
+        <title> The sleep co </title>
         <!-- This is our gridley for our flexbox grids-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
         <!-- This is our font awesome icons-->
@@ -16,13 +17,27 @@
     </head>
     <!-- This is the body, this is where all of our page content goes-->
     <body>
-    <!------------------ Header Banner------------------>
-    <header class="padded grid text-center tall-100">
+    <!-- Navigation -->
+    <header class="grid navigation padded-bottom-xs">
+        <div class="col-4-middle" class="nav-logo">
+          <a href="/index.html">
+            <i id="logo-header" class="fa-solid fa-cloud"></i>
+          </a>
+        </div>
+        <nav class="col-8-middle text-right">
+            <a href="/index.html" class="nav-link"> Home</a>
+            <a href="/about.html" class="nav-link"> About</a>
+            <a href="/products.html" class="nav-link">Products</a>
+            <a href="contact.html" class="emphasis-button"> Contact</a>
+        </nav>
+    </header>
+        <!------------------ Header Banner------------------>
+    <section class="padded grid text-center tall-100 header-banner">
         <div class="col-12-middle">
         <h2 class="font-weight-extra-bold"> <span class="featured-text">sleep </span> like a baby</h2>
         <h1 class="font-weight-normal"> the ultimate mattress solution</h1>
         </div>  
-    </header>
+    </section>
     <!------------------ Gallery section------------------>
     <section class="grid">
         <div class="padded col-6-middle"> 

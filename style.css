@@ -32,7 +32,14 @@ body {
 .padded-sm { padding: 1rem;}
 .padded-lg { padding: 10%;}
 
+.padded-top { padding-top: 5%;}
+.padded-top-sm { padding-top: 1rem;}
+.padded-top-lg { padding-top: 10%;}
 
+.padded-bottom { padding-bottom: 5%;}
+.padded-bottom-xs { padding-bottom: 0.5rem;}
+.padded-bottom-sm { padding-bottom: 1rem;}
+.padded-bottom-lg { padding-bottom: 10%;}
 
 .bg-dark {
     background-color: #192b37;
@@ -110,19 +117,57 @@ p:last-child {
 /* Header + Footer styles */
 
 header {
-    background-image: url('Images/the-sleep-co-4.jpg');
-    background-position: center;
-    background-size: cover;
-}
-
-header h2 {
-    font-size: 5.5rem;
-    line-height: 1;
+    padding: 1% 5%;
+    vertical-align: center;
 }
 
 footer a {
     border: none; 
 }
+
+.emphasis-button {
+    border: 2px solid;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    padding: 0.3rem 1.3rem;
+  }
+
+
+.navigation {
+    background-color: #192b37;
+    color: white;
+    background-image: none;
+}
+
+
+.nav-logo a:hover {
+    color: white;
+}
+
+.nav-link {
+    border: none;
+    padding: 0.5rem;
+}
+
+.header-banner {
+    background-image: url('Images/the-sleep-co-4.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.header-banner h2 {
+    font-size: 5.5rem;
+    line-height: 1;
+}
+
+#logo-header {
+    display: block;
+    text-align: left;
+    margin-bottom: 0rem;
+    padding: 0rem;
+    font-size: 3rem;
+}
+
 
 
 /*Background images*/
