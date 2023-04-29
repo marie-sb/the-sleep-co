@@ -3,35 +3,37 @@ layout: default
 text-headline-featured: pictures
 text-headline: from our clients
 text-subline: get inspired
-image: 
-    - image-1: Images/the-sleep-co-2.jpg
-    - image-2: Images/the-sleep-co-2.jpg
-    - image-3: Images/the-sleep-co-2.jpg
-    - image-4: Images/the-sleep-co-2.jpg
-    - image-5: Images/the-sleep-co-2.jpg
-    - image-6: Images/the-sleep-co-2.jpg
+gallery: 
+- background-image: Images/the-sleep-co-2.jpg
+  column-size: col-6
+  aspect-ratio: square
+- background-image: Images/the-sleep-co-3.jpg
+  column-size: col-6
+  aspect-ratio: square
+- background-image: Images/the-sleep-co-4.jpg
+  column-size: col-4
+  aspect-ratio: portrait-tall
+- background-image: Images/the-sleep-co-1.jpg
+  column-size: col-4
+  aspect-ratio: portrait-tall
+- background-image: Images/the-sleep-co-3.jpg
+  column-size: col-4
+  aspect-ratio: portrait-tall
+- background-image: Images/the-sleep-co-2.jpg
+  column-size: col-12
+  aspect-ratio: landscape
 ---
 <!------------------ Header banner ------------------>
 {% include header-banner.html %}
 <!------------------ Image banner ------------------>
-{% for item in page.image %}
-<div class="gallery grid">
-    <div class="col-6">
-      <div class="bg-image square" style="background-image: url('{{item.image-1}}')"></div>
+
+<div class="gallery grid padded">
+  {% for item in page.gallery %}
+    <div class="{{item.column-size}}">
+      <div class="bg-image {{item.aspect-ratio}}" 
+      style="background-image: url('{{item.background-image}}')">
+      </div>
     </div>
-    <div class="col-6">
-      <div class="bg-image square bg-pos-b"style="background-image: url('{{item.image-2}}')"></div>
-    </div>
-    <div class="col-4_xs-12">
-      <div class="bg-image portrait-tall" style="background-image: url('{{item.image-3}}')"></div>
-    </div>
-    <div class="col-4_xs-12">
-      <div class="bg-image portrait-tall" style="background-image: url('{{item.image-4}}')"></div>
-    </div>
-    <div class="col-4_xs-12">
-      <div class="bg-image portrait-tall" style="background-image: url('{{item.image-5}}')"></div>
-    </div>
-    <div class="col-12">
-      <div class="bg-image landscape" style="background-image: url('{{item.image-6}}')"></div>
-    </div>
+    {% endfor %}
 </div>
+

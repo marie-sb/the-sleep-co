@@ -29,6 +29,12 @@ section {
 .landscape {padding-bottom: 66%;}
 .landscape-wide {padding-bottom: 56%;}
 
+.bg-pos-t {background-position: top;}
+.bg-pos-b {background-position: bottom;}
+.bg-pos-l {background-position: left;}
+.bg-pos-r {background-position: right;}
+
+
 /* universal styles and utility classes */
 
 body { 
@@ -180,6 +186,10 @@ footer a {
 }
 
 
+/* Image Gallery */
+.gallery [class*="col-"] {
+    padding: 0.5%;
+}
 
 /*Background images*/
 
