@@ -46,6 +46,10 @@ body {
     color: white;
 }
 
+.bg-featured {
+    background-color: #ffbe00;
+}
+
 .tall-50 {min-height: 50vh;}
 .tall-60 {min-height: 60vh;}
 .tall-70 {min-height: 70vh;}
@@ -195,4 +199,35 @@ footer a {
     font-size: 3rem;
 }
 
+/* Mobile Menu Styles*/
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.fa-bars {
+    text-align: right;
+}
+/* General CSS Responsive Styles (Apply everywhere unless overwritten) */
+
+.show-xs,
+.show-sm,
+.show-md,
+.mobile-menu {
+    display: none;
+}
+
+/* Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */
+
+@media(max-width:64em) {
+    .show-md {display: block;}
+    .hide-md {display: none;}
+
+    .md-tall-80 {min-height: 80vh;}
+}
 

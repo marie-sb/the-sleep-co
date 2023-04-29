@@ -19,31 +19,34 @@
     <body>
         <!-- Navigation -->
         <header class="grid navigation padded-bottom-xs">
-            <div class="col-4-middle" class="nav-logo">
+            <div class="col-4_sm-11-middle" class="nav-logo">
             <a href="/index.html">
                 <i id="logo-header" class="fa-solid fa-cloud"></i>
             </a>
             </div>
-            <nav class="col-8-middle text-right">
+            <nav class="col-8_md-12-middle text-right hide-md">
                 <a href="/index.html" class="nav-link"> Home</a>
                 <a href="/about.html" class="nav-link"> About</a>
                 <a href="/products.html" class="nav-link">Products</a>
+                <a href="/gallery.html" class="nav-link">Gallery</a>
                 <a href="contact.html" class="emphasis-button"> Contact</a>
             </nav>
-        </header>
         
-        <div class="col-1">
+        <div class="col-1 show-md">
             <div class="hamburger-button">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     
-    <nav class="mobile-menu">
-        <a href="/index.html" class="nav-link"> Home</a>
-                <a href="/about.html" class="nav-link"> About</a>
-                <a href="/products.html" class="nav-link">Products</a>
-                <a href="contact.html" class="emphasis-button"> Contact</a>
-    </nav>
+        <nav class="mobile-menu bg-featured padded">
+            <a href="/index.html" class="nav-link"> Home</a>
+            <a href="/about.html" class="nav-link"> About</a>
+            <a href="/products.html" class="nav-link">Products</a>
+            <a href="/gallery.html" class="nav-link">Gallery</a>
+            <a href="contact.html" class="emphasis-button"> Contact</a>
+        </nav>
+
+</header>
 
     {{ content }}
     <!------------------ footer ------------------>
@@ -61,5 +64,7 @@
     </footer>
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Custom Javascript -->
+    <script src="/java.js"></script>
     </body>
 </html>
