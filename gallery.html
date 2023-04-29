@@ -3,25 +3,28 @@ layout: default
 text-headline-featured: pictures
 text-headline: from our clients
 text-subline: get inspired
-gallery: 
-- background-image: Images/the-sleep-co-2.jpg
-  column-size: col-6
-  aspect-ratio: square
-- background-image: Images/the-sleep-co-3.jpg
-  column-size: col-6
-  aspect-ratio: square
-- background-image: Images/the-sleep-co-4.jpg
-  column-size: col-4
-  aspect-ratio: portrait-tall
-- background-image: Images/the-sleep-co-1.jpg
-  column-size: col-4
-  aspect-ratio: portrait-tall
-- background-image: Images/the-sleep-co-3.jpg
-  column-size: col-4
-  aspect-ratio: portrait-tall
-- background-image: Images/the-sleep-co-2.jpg
-  column-size: col-12
-  aspect-ratio: landscape
+gallery:
+  - background-image: Images/the-sleep-co-2.jpg
+    column-size: col-6
+    aspect-ratio: square
+  - background-image: Images/the-sleep-co-3.jpg
+    column-size: col-6
+    aspect-ratio: square
+  - background-image: Images/the-sleep-co-4.jpg
+    column-size: col-4
+    aspect-ratio: portrait-tall
+  - background-image: Images/the-sleep-co-1.jpg
+    column-size: col-4
+    aspect-ratio: portrait-tall
+  - background-image: Images/the-sleep-co-3.jpg
+    column-size: col-4
+    aspect-ratio: portrait-tall
+  - background-image: Images/the-sleep-co-2.jpg
+    column-size: col-12
+    aspect-ratio: landscape
+  - background-image: /Images/the-sleep-co-2.jpg
+    column-size: co-12
+    aspect-ratio: landscape
 ---
 <!------------------ Header banner ------------------>
 {% include header-banner.html %}
@@ -30,8 +33,7 @@ gallery:
 <div class="gallery grid padded">
   {% for item in page.gallery %}
     <div class="{{item.column-size}}">
-      <div class="bg-image {{item.aspect-ratio}}" 
-      style="background-image: url('{{item.background-image}}')">
+      <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background-image}}')">
       </div>
     </div>
     {% endfor %}
