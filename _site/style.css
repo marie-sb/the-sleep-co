@@ -17,10 +17,17 @@ section {
 
 /* Image Styles */
 .bg-image {
-    background-image: url('/Images/the-sleep-co-1.jpg');
     background-size: cover;
-    min-height: 10rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(240,240,240);
 }
+
+.portrait-tall {padding-bottom: 175%;}
+.portrait {padding-bottom: 125%;}
+.square {padding-bottom: 100%;}
+.landscape {padding-bottom: 66%;}
+.landscape-wide {padding-bottom: 56%;}
 
 /* universal styles and utility classes */
 

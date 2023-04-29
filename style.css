@@ -17,10 +17,23 @@ section {
 
 /* Image Styles */
 .bg-image {
-    background-image: url('/Images/the-sleep-co-1.jpg');
     background-size: cover;
-    min-height: 10rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(240,240,240);
 }
+
+.portrait-tall {padding-bottom: 175%;}
+.portrait {padding-bottom: 125%;}
+.square {padding-bottom: 100%;}
+.landscape {padding-bottom: 66%;}
+.landscape-wide {padding-bottom: 56%;}
+
+.bg-pos-t {background-position: top;}
+.bg-pos-b {background-position: bottom;}
+.bg-pos-l {background-position: left;}
+.bg-pos-r {background-position: right;}
+
 
 /* universal styles and utility classes */
 
@@ -173,6 +186,10 @@ footer a {
 }
 
 
+/* Image Gallery */
+.gallery [class*="col-"] {
+    padding: 0.5%;
+}
 
 /*Background images*/
 
