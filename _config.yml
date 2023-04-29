@@ -1,5 +1,9 @@
 _select_data:
   column-sizes:
+  - col-6
+  - col-4
+  - col-12 
+  
   col-6: One Half
   col-4: One Third
   co-12: Full Width
