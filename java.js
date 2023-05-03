@@ -9,3 +9,15 @@ $( document ).ready(function() {
 
     
 });
+
+//for popup gallery
+lightGallery(document.getElementById('lightgallery'), {
+    speed: 500,
+    download: false,
+  });
+
+  //for popup gallery-2
+lightGallery(document.getElementById('lightgallery-2'), {
+    speed: 500,
+    download: false,
+  });

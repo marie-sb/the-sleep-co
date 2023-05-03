@@ -230,6 +230,16 @@ footer a {
 .fa-bars {
     text-align: right;
 }
+
+/* Popup Gallery styles */
+
+.lg-backdrop {
+    background-color: rgb(60,60,60);
+}
+
+.lg-backdrop.in {
+    opacity: 0.9;
+}
 /* General CSS Responsive Styles (Apply everywhere unless overwritten) */
 
 .show-xs,
