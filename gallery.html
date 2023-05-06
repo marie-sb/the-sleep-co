@@ -1,5 +1,7 @@
 ---
 layout: default
+popup-gallery: true
+gallery-background: Dark Background
 text-headline-featured: pictures
 text-headline: from our clients
 text-subline: get inspired
@@ -7,54 +9,67 @@ gallery:
   - background-image: Images/the-sleep-co-2.jpg
     column-size: col-6
     aspect-ratio: square
+    type: dog
   - background-image: Images/the-sleep-co-3.jpg
     column-size: col-6
     aspect-ratio: square
+    type: dog
   - background-image: Images/the-sleep-co-4.jpg
     column-size: col-4
     aspect-ratio: portrait-tall
+    type: cat
   - background-image: Images/the-sleep-co-1.jpg
     column-size: col-4
     aspect-ratio: portrait-tall
+    type: cat
   - background-image: Images/the-sleep-co-3.jpg
     column-size: col-4
     aspect-ratio: portrait-tall
+    type: cat
   - background-image: /Images/the-sleep-co-2.jpg
     column-size: col-12
     aspect-ratio: landscape
+    type: horse
 ---
 <!------------------ Header banner ------------------>
 {% include header-banner.html %}
 
-<section> 
-<h2> Standard Gallery </h2>
-<!------------------  Standard Image Gallery ------------------>
-<div class="gallery grid padded">
-  {% for item in page.gallery %}
-    <div class="{{item.column-size}}">
-      <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background-image}}')">
-      </div>
-    </div>
-    {% endfor %}
-</div>
-</section>
-
-<section> 
-<h2> Pop up Gallery </h2>
 <!------------------  Popup Image Gallery ------------------>
+ {% if page.popup-gallery == true %}
+<section class="padded {% if page.gallery-background == 'Dark Background' %} bg-dark {% endif %}"> 
+<h2> Pop up Gallery </h2>
 <div class="gallery grid padded" id="lightgallery">
   {% for item in page.gallery %}
+  {% if item.type != 'dog' %} <!-- if the image has this type than output it, if not, don´t show -->
     <a class="{{item.column-size}}" href="{{item.background-image}}">
       <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background-image}}')">
       </div>
     </a>
+  {% endif %}
     {% endfor %}
 </div>
 </section>
 
-<section> 
-  <h2> Pop up Gallery 2 </h2>
-  <!------------------  Popup Image Gallery ------------------>
+{% else %}
+
+<!------------------  Standard Image Gallery ------------------>
+<section class="padded"> 
+  <h2> Standard Gallery </h2>
+  <div class="gallery grid padded">
+    {% for item in page.gallery %}
+      <div class="{{item.column-size}}">
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background-image}}')">
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+  </section>
+
+  {% endif %}
+
+<!-- <section> 
+  <h2> Pop up Gallery 2 </h2> 
+  ----------------  Popup Image Gallery ----------------
   <div class="gallery grid padded" id="lightgallery-2">
       <a class="button" href="Images/the-sleep-co-1.jpg" title="sleep co">
         View our work (Gallery will appear)
@@ -67,4 +82,6 @@ gallery:
       <a href="Images/the-sleep-co-3.jpg" title="sleep co 6"> </a>
    
   </div>
-  </section>
+  </section> -->
+
+  {% include testemonial.html %}
